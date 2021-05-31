@@ -285,14 +285,19 @@ function wpse_enqueue_page_template_includes() {
             array('splide-gallery'), 1.0, true);
     }
     else if (is_page( 'archiv' )){
-        wp_enqueue_style('monte-post_type', get_template_directory_uri() . "/library/scss/customs/post/post-fix.css",
-            array('monte-bootstrap', 'bones-stylesheet'), 1.0, 'all');
         wp_enqueue_style('monte-archive_page_specifics', get_template_directory_uri() . "/library/scss/customs/post/archive_page.css",
-            array('monte-bootstrap', 'bones-stylesheet', 'monte-post_type'), 1.0, 'all');
-
+            array('monte-bootstrap', 'bones-stylesheet'), 1.0, 'all');
+    }
+    else if (is_404()){
+        wp_enqueue_style('monte-404_customs', get_template_directory_uri() . "/library/scss/customs/post/404_page.css",
+            array('monte-bootstrap', 'bones-stylesheet'), 1.0, 'all');
+    }
+    else if (is_single()){
+        wp_enqueue_style('monte-404_customs', get_template_directory_uri() . "/library/scss/customs/post/single.css",
+            array('monte-bootstrap', 'bones-stylesheet'), 1.0, 'all');
     }
     else{
-        wp_enqueue_style('monte-post_type', get_template_directory_uri() . "/library/scss/customs/post/post-fix.css",
+        wp_enqueue_style('monte-single_type', get_template_directory_uri() . "/library/scss/customs/post/single.css",
             array('monte-bootstrap', 'bones-stylesheet'), 1.0, 'all');
     }
 }

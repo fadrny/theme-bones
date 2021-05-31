@@ -32,7 +32,7 @@
                     $btmetanm=get_post_meta( $btpgid, 'WP_Catid','true' );
                     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
-                    $args = array( 'posts_per_page' => 1, 'category_name' => $btmetanm,
+                    $args = array( 'posts_per_page' => 5, 'category_name' => $btmetanm,
                     'paged' => $paged,'post_type' => 'post' );
                     $postslist = new WP_Query( $args );
 
@@ -55,9 +55,9 @@
 
                     endwhile;
 
-                    echo '<div class="ovladani_stranek"><div class="novejsi_stranky">';
+                    echo '<div class="ovladani_stranek"><div class="novejsi_stranky tlacitko">';
                     previous_posts_link( 'Načíst novější' );
-                    echo '</div><div class="starsi_stranky">';
+                    echo '</div><div class="starsi_stranky tlacitko">';
                     next_posts_link( 'Načíst starší', $postslist->max_num_pages );
                     echo '</div></div>';
                     wp_reset_postdata();

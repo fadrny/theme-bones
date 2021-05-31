@@ -967,6 +967,11 @@ body {
   font-weight: 600;
   text-decoration: none;
   writing-mode: vertical-lr;
+  transition: 0.3s;
+}
+.aktuality .aktuality-wrap .aktuality-bounding-box .one-aktualita .cist-vice-wrapper .cist-vice:hover {
+  color: #ffffff;
+  background-color: #274060;
 }
 .aktuality .aktuality-wrap .show-all-btn-wrap {
   display: flex;
@@ -978,7 +983,13 @@ body {
   background-color: #FF9F1C;
   padding: 0.7rem 2rem;
   border-radius: 5rem;
-  font-size: calc(.8rem + .75vw);
+  font-weight: 600;
+  font-size: calc(.9rem + .6vw);
+  transition: 0.3s;
+}
+.aktuality .aktuality-wrap .show-all-btn-wrap .show-all-btn:hover {
+  color: #ffffff;
+  background-color: #274060;
 }
 
 .fotogalerie {

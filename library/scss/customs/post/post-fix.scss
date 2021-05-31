@@ -30,4 +30,19 @@ h1, h2, h3, h4{
   font-weight: 700;
 }
 
+.entry-content blockquote{
+  border-left-color: $base-color;
+}
+
+a{
+  color: darken($secondary-color, 15%);
+  &:hover{
+    color: $secondary-color;
+  }
+}
+
+article img{
+  width: 100%;
+}
+
 

@@ -1,0 +1,36 @@
+@use "post-fix";
+@import "../defines";
+
+#main{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  article{
+    max-width: 35rem;
+  }
+
+  .search{
+    min-width: 17.5rem;
+    @media (min-width: $key-width) {
+      margin-left: 1rem;
+      margin-top: 3rem;
+    }
+    @media (max-width: $key-width) {
+      margin-bottom: 5rem;
+    }
+  }
+}
+
+#s{
+  width: unset;
+  min-width: 20rem;
+}
+.screen-reader-text{
+  margin-bottom: 1rem;
+}
+#searchsubmit{
+  padding: .5rem;
+  background-color: $base-color;
+  color: $bg-color;
+}

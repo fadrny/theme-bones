@@ -438,57 +438,9 @@ article img {
   width: 100%;
 }
 
-.one-aktualita {
-  margin: 3rem 2rem;
-}
-.one-aktualita .main-texts {
-  margin-bottom: 1rem;
-  max-width: 62rem;
-  color: #274060;
-}
-.one-aktualita .main-texts .aktualita-date {
-  margin-bottom: 0.2rem;
-}
-.one-aktualita .main-texts .aktualita-name {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #303030;
-}
-.one-aktualita .cist-vice-wrapper {
-  display: flex;
-  background-color: #ececec;
-}
-.one-aktualita .cist-vice-wrapper .aktualita-text {
-  margin: 1.5rem;
-  color: #303030;
-}
-.one-aktualita .cist-vice-wrapper .cist-vice {
-  padding: 0.5rem 0.5rem;
-  margin: unset;
-  border-left: 0.5rem solid #ffffff;
-  font-size: calc(.9rem + .2vw);
-  text-align: center;
-  background-color: #FF9F1C;
-  color: #274060;
-  font-weight: 600;
-  text-decoration: none;
-  writing-mode: vertical-lr;
-  transition: 0.3s;
-}
-.one-aktualita .cist-vice-wrapper .cist-vice:hover {
-  color: #ffffff;
-  background-color: #274060;
+#main article {
+  max-width: 50rem;
+  margin: auto;
 }
 
-.ovladani_stranek {
-  margin: 3rem 2rem;
-  display: flex;
-  justify-content: space-between;
-}
-.ovladani_stranek .tlacitko a {
-  padding: 0.5rem;
-  background-color: #FF9F1C;
-  color: #274060;
-}
-
-/*# sourceMappingURL=archive_page.css.map */
+/*# sourceMappingURL=single.css.map */

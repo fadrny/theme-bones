@@ -54,6 +54,13 @@
             text-decoration: none;
 
             writing-mode: vertical-lr;
+
+            transition: $transition-time;
+
+            &:hover{
+              color: $bg-color;
+              background-color: $base-color;
+            }
           }
         }
       }
@@ -69,7 +76,14 @@
         background-color: $secondary-color;
         padding: .7rem 2rem;
         border-radius: 5rem;
-        font-size: calc(.8rem + .75vw);
+        font-weight: 600;
+        font-size: calc(.9rem + .6vw);
+        transition: $transition-time;
+
+        &:hover{
+          color: $bg-color;
+          background-color: $base-color;
+        }
       }
     }
   }
