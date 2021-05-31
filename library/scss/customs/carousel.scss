@@ -1,0 +1,101 @@
+@import "defines";
+
+.carousel{
+    padding-top: 6.8rem;
+    height: 35rem;
+    position: relative;
+
+    @media (max-width: $super-small-width) {
+        padding-top: 5.3rem;
+    }
+
+    .main-photo{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    .over-carousel{
+        height: 12.5rem;
+        width: 45rem;
+        border-radius: 5rem 0 0 5rem;
+        background-color: rgba(48,48,48,0.75);
+        position: absolute;
+        right: 0;
+        bottom: 2.5rem;
+        z-index: 125;
+
+        @media (max-width: $key-width) {
+            height: 10rem;
+            width: 32rem;
+            border-radius: 5rem 0 0 5rem;
+        }
+
+        @media (max-width: $super-small-width) {
+            width: 95%;
+            height: 9rem;
+        }
+
+        .over-carousel-wrapper{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            opacity: 100%;
+            align-items: center;
+
+            .MariaImage{
+                height: 75%;
+                border: .45rem solid rgba(255,255,255,0.9);
+                border-radius: 100rem;
+                margin-left: 2rem;
+                @media (max-width: $key-width) {
+                    border: .35rem solid rgba(255,255,255,0.9);
+                }
+                @media (max-width: $super-small-width) {
+                    border: .25rem solid rgba(255,255,255,0.9);
+                    margin-left: 1.5rem;
+                    height: 65%;
+                }
+            }
+
+            .texts{
+                color: $bg-color;
+                text-align: right;
+                margin-right: 4rem;
+                margin-left: 2rem;
+                @media (max-width: $key-width) {
+                    margin-right: 2rem;
+                    margin-left: 1rem;
+                }
+                @media (max-width: $super-small-width) {
+                    margin-right: 1.6rem;
+                    margin-left: .8rem;
+                }
+
+                .name{
+                    margin-top: 1.25rem;
+                    margin-right: 1rem;
+                    font-size: 1.125rem;
+                    @media (max-width: $key-width) {
+                        margin-top: .8rem;
+                        margin-right: .8rem;
+                    }
+                    @media (max-width: $super-small-width) {
+                        margin-top: .5rem;
+                        margin-right: .5rem;
+                        font-size: 4vw;
+                    }
+                }
+
+                .citat{
+                    font-size: 2rem;
+                    @media (max-width: $key-width) {
+                        font-size: 1.5rem;
+                    }
+                    @media (max-width: $super-small-width) {
+                        font-size: 4.5vw;
+                    }
+                }
+            }
+        }
+    }
+}

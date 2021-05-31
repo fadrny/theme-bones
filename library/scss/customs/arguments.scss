@@ -1,0 +1,62 @@
+@import "defines";
+
+.arguments{
+  width: 100%;
+  display: flex;
+  .arguments-wrap{
+    justify-content: center;
+
+    .arguments-container{
+      display: grid;
+      grid-template: 1fr 1fr / 1fr 1fr;
+      grid-gap: 2rem;
+      @media (max-width: $key-width) {
+        grid-template: repeat(4,1fr) / 1fr;
+        grid-gap: 0.5rem;
+      }
+
+      .single-argument{
+        display: flex;
+        margin: 2rem;
+        align-items: center;
+
+        @media (max-width: $key-width) {
+          margin: 0.5rem;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        img{
+          margin-right: 1rem;
+          @media (max-width: $key-width) {
+            margin: 0.5rem 0;
+          }
+        }
+        .argument-texts{
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          @media (max-width: $key-width) {
+            justify-content: center;
+            text-align: center;
+            max-width: 50ch;
+            margin-bottom: 0.5rem;
+          }
+
+          .argument-nadpisek{
+            flex-basis: 100%;
+            max-width: 25ch;
+            font-size: calc(1.3rem + .6vw);
+            color: $base-color;
+            font-weight: 500;
+          }
+          .argument-textik{
+            max-width: 65ch;
+            flex-basis: 100%;
+            color: $text-dark;
+          }
+        }
+      }
+    }
+  }
+}

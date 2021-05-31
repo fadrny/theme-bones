@@ -1,0 +1,53 @@
+@import "defines";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: $font-family; //lol, ale to tu melo byt
+  font-size: $font-size-base;
+  background-color: $bg-color;
+}
+
+
+.category-name-wrap{
+  width: 100%;
+  margin: auto;
+  text-align: center;
+
+  h1{
+    font-size: 3rem;
+    font-weight: 900;
+    color: $text-dark;
+    margin-bottom: ($category-margin / 2);
+    @media (max-width: $key-width) {
+      font-size: 2.5rem;
+    }
+    @media (max-width: $super-small-width) {
+      font-size: 2rem;
+    }
+  }
+}
+
+.inCategory-wrap{
+  margin: $category-margin;
+  width: 100%;
+  @media (max-width: $key-width) {
+    margin: $category-margin 0;
+  }
+}
+
+.separator{
+  height: 1rem;
+  width: 100%;
+  background-color: $base-color;
+}

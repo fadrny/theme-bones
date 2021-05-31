@@ -1,0 +1,62 @@
+@import "defines";
+
+.calendar{
+  width: 100%;
+  display: flex;
+
+  .calendar-wrap{
+
+    .events{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      .single-event{
+        display: flex;
+        margin: $category-margin / 2;
+
+        &:last-child{
+          margin-bottom: unset;
+        }
+
+        .date-square{
+          height: $category-margin;
+          min-width: $category-margin;
+          background-color: $secondary-color;
+          padding: $category-margin / 10;
+          text-align: center;
+
+          .letters-of-month{
+            margin-bottom: unset;
+            color: $base-color;
+          }
+
+          .number-of-day{
+            font-weight: 700;
+            color: $base-color;
+          }
+        }
+
+        .event-popisek{
+          margin-left: $category-margin / 2;
+          max-width: 25rem;
+          color: $text-dark;
+          h4{
+
+            font-size: calc(1.275rem + .3vw);
+
+            @media (min-width: $key-width) {
+              font-size: 1.40rem;
+            }
+
+          }
+
+          .exact-date{
+            margin-bottom: $category-margin / 10;
+            color: $text-dark;
+          }
+        }
+      }
+    }
+  }
+}

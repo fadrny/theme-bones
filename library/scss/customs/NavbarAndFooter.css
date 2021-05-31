@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 0.925rem;
+  background-color: #ffffff;
+}
+
+.category-name-wrap {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+.category-name-wrap h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #303030;
+  margin-bottom: 2.5rem;
+}
+@media (max-width: 995px) {
+  .category-name-wrap h1 {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 576px) {
+  .category-name-wrap h1 {
+    font-size: 2rem;
+  }
+}
+
+.inCategory-wrap {
+  margin: 5rem;
+  width: 100%;
+}
+@media (max-width: 995px) {
+  .inCategory-wrap {
+    margin: 5rem 0;
+  }
+}
+
+.separator {
+  height: 1rem;
+  width: 100%;
+  background-color: #274060;
+}
+
+.navbar,
+.navbar .container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 995px) {
+  .navbar,
+.navbar .container {
+    display: block;
+  }
+}
+
+.navbar {
+  padding: 1.15rem 3rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.035);
+  background-color: #ffffff;
+}
+@media (max-width: 576px) {
+  .navbar {
+    padding: 1.15rem 1rem;
+  }
+}
+@media (min-width: 995px) {
+  .navbar .container {
+    max-width: 2500px;
+  }
+}
+.navbar .navbar-header {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 995px) {
+  .navbar .navbar-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+}
+.navbar .navbar-header a .logo-img {
+  height: 4.5rem;
+}
+@media (max-width: 576px) {
+  .navbar .navbar-header a .logo-img {
+    height: 3rem;
+  }
+}
+.navbar .navbar-header .navbar-toggler {
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  display: none;
+  outline: none;
+}
+.navbar .navbar-header .navbar-toggler:focus {
+  outline: none;
+  box-shadow: unset;
+}
+@media (max-width: 995px) {
+  .navbar .navbar-header .navbar-toggler {
+    display: block;
+  }
+}
+.navbar .navbar-header .navbar-toggler span {
+  height: 3px;
+  width: 2rem;
+  background-color: #303030;
+  opacity: 75%;
+  display: block;
+}
+.navbar .navbar-header .navbar-toggler span:not(:last-child) {
+  margin-bottom: 0.4rem;
+}
+.navbar .navbar-header > a {
+  font-weight: 500;
+  color: #303030;
+}
+.navbar .navbar-menu {
+  display: flex;
+  flex-basis: auto;
+  flex-grow: 1;
+  align-items: center;
+}
+@media (max-width: 995px) {
+  .navbar .navbar-menu {
+    display: none;
+    text-align: center;
+  }
+}
+.navbar .navbar-menu .navbar-nav {
+  margin-left: auto;
+  flex-direction: row;
+  display: flex;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+@media (max-width: 995px) {
+  .navbar .navbar-menu .navbar-nav {
+    width: 100%;
+    display: block;
+    border-top: 1px solid #EEE;
+    margin-top: 1rem;
+  }
+  .navbar .navbar-menu .navbar-nav .intraBtn-wrapper {
+    margin-left: 0;
+  }
+}
+.navbar .navbar-menu .navbar-nav > li > a {
+  color: #303030;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+}
+.navbar .navbar-menu .navbar-nav > li > a:hover {
+  color: #274060;
+}
+.navbar .navbar-menu .navbar-nav > li.active a {
+  color: #274060;
+}
+.navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown {
+  list-style: none;
+  position: absolute;
+  top: 3.65rem;
+  left: 0;
+  background-color: #fff;
+  padding: 0.5rem 0;
+  min-width: 160px;
+  width: auto;
+  white-space: nowrap;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  z-index: 99999;
+  display: none;
+}
+@media (max-width: 995px) {
+  .navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown {
+    position: relative;
+    box-shadow: none;
+    top: 0;
+  }
+}
+.navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown li a {
+  color: #303030;
+  padding: 0.25rem 1rem;
+  display: block;
+  opacity: 75%;
+  text-decoration: none;
+}
+.navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown li a:hover {
+  opacity: 100%;
+}
+.navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown.show {
+  display: block !important;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+.navbar .intraBtn-wrapper {
+  background-color: #274060;
+  border-radius: 1em;
+  margin: 0 0 0 1.5rem;
+}
+.navbar .intraBtn-wrapper a {
+  border: 1rem;
+  margin: 0 0.25em;
+  font-weight: 600;
+  color: #ffffff !important;
+}
+.navbar .navbar-dropdown {
+  position: relative;
+}
+.navbar .dropdown-toggler {
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.navbar .navbar-header > a span {
+  color: #274060;
+}
+
+.navbar .navbar-header h4 {
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+@media (max-width: 995px) {
+  .navbar .navbar-header h4 {
+    font-size: 1.05rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .container, .container-sm {
+    max-width: unset;
+  }
+}
+
+nav {
+  position: fixed !important;
+  z-index: 999;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  background-color: #274060;
+  color: #ffffff;
+  padding: 2.5rem 2.5rem 0;
+}
+.footer .footer-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 7.5rem;
+}
+.footer .footer-wrap .bobik-nadpisek h4 {
+  font-weight: 700;
+  font-size: 1.75rem;
+  text-align: center;
+}
+.footer .footer-wrap .cool-links {
+  min-width: 15rem;
+}
+.footer .footer-wrap .cool-links .cool-links-wrapper {
+  margin-top: 3.3333333333rem;
+}
+.footer .footer-wrap .cool-links .cool-links-wrapper .one-cool-link {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 0.625rem;
+  text-transform: uppercase;
+}
+.footer .footer-wrap .kontakty {
+  min-width: 15rem;
+}
+.footer .footer-wrap .kontakty .kontakty-nadpisek {
+  margin-bottom: 3.3333333333rem;
+}
+.footer .footer-wrap .kontakty .one-kontakt {
+  display: flex;
+  margin-bottom: 1.25rem;
+}
+.footer .footer-wrap .kontakty .one-kontakt .icon-image {
+  height: 100%;
+  margin-right: 1.5rem;
+}
+.footer .footer-wrap .kontakty .one-kontakt .one-kontakt-text {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.footer .footer-wrap .white-strip {
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+}
+
+/*# sourceMappingURL=NavbarAndFooter.css.map */

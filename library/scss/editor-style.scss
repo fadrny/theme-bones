@@ -85,7 +85,7 @@ body#tinymce.wp-editor {
 	}
 
 	h3, .h3 {
-		font-size: 1.125em;
+		font-size: calc(1.3rem + .6vw);
 	}
 
 	h4, .h4 {

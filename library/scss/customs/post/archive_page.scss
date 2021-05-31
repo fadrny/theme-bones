@@ -1,0 +1,47 @@
+@use "post-fix";
+@import "../defines";
+
+
+.one-aktualita{
+  margin: 3rem 2rem;
+
+  .main-texts{
+    margin-bottom: 1rem;
+    max-width: 62rem;
+    color: $base-color;
+
+    .aktualita-date{
+      margin-bottom: .2rem;
+    }
+    .aktualita-name{
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: $text-dark;
+    }
+  }
+
+  .cist-vice-wrapper{
+    display: flex;
+    background-color: $border-color;
+
+    .aktualita-text{
+      margin: 1.5rem;
+      color: $text-dark;
+    }
+
+    .cist-vice{
+      padding: .5rem .5rem;
+      margin: unset;
+      border-left: .5rem solid $bg-color;
+      font-size: calc(.9rem + .2vw);
+      text-align: center;
+
+      background-color: $secondary-color;
+      color: $base-color;
+      font-weight: 600;
+      text-decoration: none;
+
+      writing-mode: vertical-lr;
+    }
+  }
+}

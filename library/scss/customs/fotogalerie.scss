@@ -1,0 +1,54 @@
+@import "defines";
+
+.fotogalerie{
+  width: 100%;
+  display: flex;
+  background-color: $base-color;
+
+  .fotogalerie-wrap{
+    margin-left: unset;
+    margin-right: unset;
+
+    .category-name-wrap {
+      h1 {
+        color: $bg-color;
+      }
+    }
+  }
+}
+
+.splide{
+  margin: $category-margin $category-margin $category-margin / 3;
+  @media (max-width: $key-width) {
+    margin: $category-margin  $category-margin / 2 $category-margin / 3;
+  }
+  @media (max-width: $super-small-width) {
+    margin: $category-margin  $category-margin / 2 $category-margin / 2;
+  }
+}
+
+.splide__slide {
+  border: 2px solid $bg-color;
+  //width: 75%;
+  //height: 12rem;
+  //object-fit: cover;
+}
+
+.splide__track{
+  margin: 0 5rem;
+}
+
+.splide__arrow{
+ background-color: unset !important;
+}
+.splide__arrow svg{
+  height: 8rem !important;
+  width: 8rem !important;
+}
+.splide__arrow--prev svg{
+  transform: rotate(-90deg) scaleX(-1) !important;
+}
+.splide__arrow--next svg{
+  transform: rotate(90deg);
+}
+

@@ -1,34 +1,40 @@
-			<footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
+<div class="footer">
+    <div class="inCategory-wrap footer-wrap">
+        <div class="cool-links">
+            <div class="cool-links-nadpisek bobik-nadpisek">
+                <h4>Důležité odkazy</h4>
+            </div>
+            <div class="cool-links-wrapper">
+                <a href="#" class="one-cool-link">bakaláři</a>
+                <a href="#" class="one-cool-link">strava</a>
+                <a href="#" class="one-cool-link">fotogalerie</a>
+                <a href="#" class="one-cool-link">kalendář</a>
+            </div>
+        </div>
+        <div class="kontakty">
+            <div class="kontakty-nadpisek bobik-nadpisek">
+                <h4>Kontakty</h4>
+            </div>
+            <div class="kontakty-wrapper">
+                <div class="one-kontakt">
+                    <img class="icon-image" src="<?php echo get_template_directory_uri()?>/library/images/icons/phone-call.png">
+                    <p class="one-kontakt-text">+420 123 456 789</p>
+                </div>
+                <div class="one-kontakt">
+                    <img class="icon-image" src="<?php echo get_template_directory_uri()?>/library/images/icons/at.png">
+                    <p class="one-kontakt-text">info@zsmontepce.cz</p>
+                </div>
+                <div class="one-kontakt">
+                    <img class="icon-image" src="<?php echo get_template_directory_uri()?>/library/images/icons/place.png">
+                    <p class="one-kontakt-text">Družstevní 305 <br> 530 09 Pardubice</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php
+wp_footer();
+?>
+</body>
+</html>
 
-				<div id="inner-footer" class="wrap cf">
-
-					<nav role="navigation">
-						<?php wp_nav_menu(array(
-    					'container' => 'div',                           // enter '' to remove nav container (just make sure .footer-links in _base.scss isn't wrapping)
-    					'container_class' => 'footer-links cf',         // class of container (should you choose to use it)
-    					'menu' => __( 'Footer Links', 'bonestheme' ),   // nav name
-    					'menu_class' => 'nav footer-nav cf',            // adding custom nav class
-    					'theme_location' => 'footer-links',             // where it's located in the theme
-    					'before' => '',                                 // before the menu
-    					'after' => '',                                  // after the menu
-    					'link_before' => '',                            // before each link
-    					'link_after' => '',                             // after each link
-    					'depth' => 0,                                   // limit the depth of the nav
-    					'fallback_cb' => 'bones_footer_links_fallback'  // fallback function
-						)); ?>
-					</nav>
-
-					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
-
-				</div>
-
-			</footer>
-
-		</div>
-
-		<?php // all js scripts are loaded in library/bones.php ?>
-		<?php wp_footer(); ?>
-
-	</body>
-
-</html> <!-- end of site. what a ride! -->

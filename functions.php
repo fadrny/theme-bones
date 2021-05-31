@@ -135,10 +135,10 @@ function bones_theme_customizer($wp_customize) {
   // Uncomment the below lines to remove the default customize sections 
 
   // $wp_customize->remove_section('title_tagline');
-  // $wp_customize->remove_section('colors');
+   //$wp_customize->remove_section('colors');
   // $wp_customize->remove_section('background_image');
   // $wp_customize->remove_section('static_front_page');
-  // $wp_customize->remove_section('nav');
+   //$wp_customize->remove_section('nav');
 
   // Uncomment the below lines to remove the default controls
   // $wp_customize->remove_control('blogdescription');
@@ -239,9 +239,88 @@ can replace these fonts, change it in your scss files
 and be up and running in seconds.
 */
 function bones_fonts() {
-  wp_enqueue_style('googleFonts', '//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
+  wp_enqueue_style('googleFonts', '//fonts.googleapis.com/css?family=Roboto');
 }
 
 add_action('wp_enqueue_scripts', 'bones_fonts');
+
+
+
+/*
+ * EDITS
+ */
+
+function monte_theme_support(){
+    add_theme_support('title-tag');
+    remove_theme_support( 'custom-logo' );
+    add_theme_support('custom-logo', array());
+
+}
+
+add_action('after_setup_theme', 'monte_theme_support');
+
+function monte_menus(){
+    $locations = array(
+        'school' => 'Hlavni menu - sekce škola',
+        'teacher' => 'Hlavni menu - sekce učitel',
+        'parent' => 'Hlavni menu - sekce rodič / žák',
+        'contacts' => 'Hlavni menu - sekce kontakty',
+        'footer-links' => 'Patička - důležité odkazy'
+    );
+
+    register_nav_menus($locations);
+}
+
+add_action('init', 'monte_menus');
+
+
+
+function wpse_enqueue_page_template_includes() {
+    if ( is_front_page() )  {
+        wp_enqueue_style('monte-main', get_template_directory_uri() . "/library/scss/customs/front-page-default.css",
+            array('monte-bootstrap', 'bones-stylesheet'), 1.0, 'all');
+        wp_enqueue_script('splide-gallery', get_template_directory_uri() . "/library/js/customs/splide.min.js",
+            array(), 1.0, true);
+        wp_enqueue_script('monte-gallery-setup', get_template_directory_uri() . "/library/js/customs/fotogallery.js",
+            array('splide-gallery'), 1.0, true);
+    }
+    else if (is_page( 'archiv' )){
+        wp_enqueue_style('monte-post_type', get_template_directory_uri() . "/library/scss/customs/post/post-fix.css",
+            array('monte-bootstrap', 'bones-stylesheet'), 1.0, 'all');
+        wp_enqueue_style('monte-archive_page_specifics', get_template_directory_uri() . "/library/scss/customs/post/archive_page.css",
+            array('monte-bootstrap', 'bones-stylesheet', 'monte-post_type'), 1.0, 'all');
+
+    }
+    else{
+        wp_enqueue_style('monte-post_type', get_template_directory_uri() . "/library/scss/customs/post/post-fix.css",
+            array('monte-bootstrap', 'bones-stylesheet'), 1.0, 'all');
+    }
+}
+add_action( 'wp_enqueue_scripts', 'wpse_enqueue_page_template_includes' );
+
+function montepce_register_includes(){
+    wp_enqueue_script('monte-navigation-controller', get_template_directory_uri() . "/library/js/customs/navbar.js",
+        array(), 1.0, true);
+    wp_enqueue_style('monte-bootstrap', "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css",
+        array(), 1.0, 'all');
+    wp_enqueue_style('monte-footer-and-header', get_template_directory_uri() . "/library/scss/customs/NavbarAndFooter.css",
+        array('monte-bootstrap', 'bones-stylesheet'), 1.0, 'all');
+
+}
+
+add_action('wp_enqueue_scripts', 'montepce_register_includes');
+
+require_once get_template_directory() . '/inc/customizer.php';
+
+
+
+
+
+
+
+
+
+
+
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>

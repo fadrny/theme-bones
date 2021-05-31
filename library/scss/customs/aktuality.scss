@@ -1,0 +1,76 @@
+@import "defines";
+
+.aktuality{
+  width: 100%;
+  display: flex;
+
+  .aktuality-wrap{
+
+    .aktuality-bounding-box{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .one-aktualita{
+        margin: 1rem 2rem;
+
+        .main-texts{
+          margin-bottom: 1rem;
+          max-width: 62rem;
+          color: $base-color;
+
+          .aktualita-date{
+            margin-bottom: .5rem;
+          }
+          .aktualita-name{
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: $text-dark;
+          }
+        }
+
+        .cist-vice-wrapper{
+          display: flex;
+          background-color: $border-color;
+
+          .aktualita-text{
+            max-width: 60rem;
+            min-width: 50vw;
+            margin: 1.5rem;
+            color: $text-dark;
+          }
+
+          .cist-vice{
+            padding: .5rem .5rem;
+            margin: unset;
+            border-left: .5rem solid $bg-color;
+            font-size: calc(.9rem + .2vw);
+            text-align: center;
+
+            background-color: $secondary-color;
+            color: $base-color;
+            font-weight: 600;
+            text-decoration: none;
+
+            writing-mode: vertical-lr;
+          }
+        }
+      }
+    }
+
+    .show-all-btn-wrap{
+      display: flex;
+      justify-content: center;
+      margin-top: 5rem;
+
+      .show-all-btn{
+        color: $base-color;
+        background-color: $secondary-color;
+        padding: .7rem 2rem;
+        border-radius: 5rem;
+        font-size: calc(.8rem + .75vw);
+      }
+    }
+  }
+}

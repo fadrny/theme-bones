@@ -1,0 +1,225 @@
+@import "defines";
+
+$navbar-link-hover: $base-color;
+$navbar-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.035);
+
+
+// navbar
+
+.navbar,
+.navbar .container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  @media (max-width: $key-width) {
+    display: block;
+  }
+}
+
+.navbar {
+  padding: 1.15rem 3rem;
+  @media (max-width: $super-small-width) {
+    padding: 1.15rem 1rem;
+  }
+  box-shadow: $navbar-shadow;
+  background-color: $bg-color;
+
+  .container {
+    @media (min-width: $key-width) {
+      max-width: 2500px;
+    }
+  }
+
+  // navbar logo
+  .navbar-header {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $key-width) {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+    }
+
+    a .logo-img{
+      height: 4.5rem;
+    }
+
+    @media (max-width: $super-small-width) {
+      a .logo-img {
+        height: 3rem;
+      }
+    }
+
+    .navbar-toggler {
+      border-radius: 5px;
+      background-color: transparent;
+      cursor: pointer;
+      border: none;
+      display: none;
+      outline: none;
+
+      &:focus{
+          outline: none;
+          box-shadow: unset;
+      }
+
+      @media (max-width: $key-width) { display: block }
+
+      span {
+        height: 3px;
+        width: 2rem;
+        background-color: $text-dark;
+        opacity: 75%;
+        display: block;
+      }
+      span:not(:last-child) {
+        margin-bottom: 0.40rem;
+      }
+    }
+
+    > a {
+      font-weight: 500;
+      color: $text-dark;
+    }
+  }
+
+
+  // navbar menu
+
+  .navbar-menu {
+    display: flex;
+    flex-basis: auto;
+    flex-grow: 1;
+    align-items: center;
+
+    @media (max-width: $key-width) {
+      display: none;
+      text-align: center;
+    }
+
+    // Ul
+    .navbar-nav {
+      margin-left: auto;
+      flex-direction: row;
+      display: flex;
+      padding-left: 0;
+      margin-bottom: 0;
+      list-style: none;
+
+      @media (max-width: $key-width) {
+        width: 100%;
+        display: block;
+        border-top: 1px solid #EEE;
+        margin-top: 1rem;
+
+        .intraBtn-wrapper{
+          margin-left: 0;
+        }
+      }
+
+      > li {
+        > a {
+          color: $text-dark;
+          text-decoration: none;
+          display: inline-block;
+          padding: 0.5rem 1.25rem;
+          &:hover {
+            color: $navbar-link-hover;
+          }
+          //@media (max-width: $key-width) {
+          //  border-bottom: 1px solid #EEE;
+          //}
+        }
+        &.active {
+          a {
+            color: $base-color;
+          }
+        }
+      }
+
+      .navbar-dropdown {
+        .dropdown {
+          list-style: none;
+          position: absolute;
+          top: 3.65rem;
+          left: 0;
+          background-color: #fff;
+          padding: 0.5rem 0;
+          min-width: 160px;
+          width: auto;
+          white-space: nowrap;
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          z-index: 99999;
+          display: none;
+          @media (max-width: $key-width) {
+            position: relative;
+            box-shadow: none;
+            top: 0;
+          }
+          li {
+            a {
+              color: $text-dark;
+              padding: 0.25rem 1rem;
+              display: block;
+              opacity: 75%;
+              text-decoration: none;
+              &:hover{
+                opacity: 100%;
+              }
+            }
+          }
+          &.show {
+            display: block !important;
+            margin-bottom: 1rem;
+            margin-top: .5rem;
+          }
+        }
+      }
+    }
+  }
+  .intraBtn-wrapper{
+    background-color: $base-color;
+    border-radius: 1em;
+    margin: 0 0 0 1.5rem;
+    a{
+      border: 1rem;
+      margin: 0 0.25em;
+      font-weight: 600;
+      color: $bg-color !important;
+    }
+  }
+  .navbar-dropdown {
+    position: relative;
+  }
+  .dropdown-toggler{
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+}
+
+// random opravy
+.navbar .navbar-header > a span {
+  color: $base-color;
+}
+.navbar .navbar-header h4 {
+  font-weight: 500;
+  font-size: 1.25rem;
+  @media (max-width: $key-width) {
+    font-size: 1.05rem;
+  }
+}
+
+.container, .container-sm {
+  @media (min-width: $super-small-width) {
+    max-width: unset;
+  }
+}
+nav{
+  position: fixed !important;
+  z-index: 999;
+}

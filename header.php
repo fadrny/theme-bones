@@ -1,77 +1,107 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?php
+    wp_head();
+    ?>
+</head>
+<body>
+<nav class="navbar">
+    <div class="container">
 
-<!--[if lt IE 7]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
-<!--[if (IE 7)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8"><![endif]-->
-<!--[if (IE 8)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9"><![endif]-->
-<!--[if gt IE 8]><!--> <html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
-
-	<head>
-		<meta charset="utf-8">
-
-		<?php // force Internet Explorer to use the latest rendering engine available ?>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-		<title><?php wp_title(''); ?></title>
-
-		<?php // mobile meta (hooray!) ?>
-		<meta name="HandheldFriendly" content="True">
-		<meta name="MobileOptimized" content="320">
-		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-
-		<?php // icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) ?>
-		<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/library/images/apple-touch-icon.png">
-		<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
-		<!--[if IE]>
-			<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
-		<![endif]-->
-		<?php // or, set /favicon.ico for IE10 win ?>
-		<meta name="msapplication-TileColor" content="#f01d4f">
-		<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
-            <meta name="theme-color" content="#121212">
-
-		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-
-		<?php // wordpress head functions ?>
-		<?php wp_head(); ?>
-		<?php // end of wordpress head ?>
-
-		<?php // drop Google Analytics Here ?>
-		<?php // end analytics ?>
-
-	</head>
-
-	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
-
-		<div id="container">
-
-			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
-
-				<div id="inner-header" class="wrap cf">
-
-					<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
-					<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
-
-					<?php // if you'd like to use the site description you can un-comment it below ?>
-					<?php // bloginfo('description'); ?>
+        <div class="navbar-header">
+            <button class="navbar-toggler" data-toggle="open-navbar1">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <a href="/">
+                <img class="logo-img" src="<?php
+                if(has_custom_logo()){
+                    $custom_logo_id = get_theme_mod('custom_logo');
+                    echo(wp_get_attachment_image_src($custom_logo_id, 'full')[0]);
+                }
+                ?>" alt="logo">
+            </a>
+        </div>
 
 
-					<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-						<?php wp_nav_menu(array(
-    					         'container' => false,                           // remove nav container
-    					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
-    					         'menu' => __( 'The Main Menu', 'bonestheme' ),  // nav name
-    					         'menu_class' => 'nav top-nav cf',               // adding custom nav class
-    					         'theme_location' => 'main-nav',                 // where it's located in the theme
-    					         'before' => '',                                 // before the menu
-        			               'after' => '',                                  // after the menu
-        			               'link_before' => '',                            // before each link
-        			               'link_after' => '',                             // after each link
-        			               'depth' => 0,                                   // limit the depth of the nav
-    					         'fallback_cb' => ''                             // fallback function (if there is one)
-						)); ?>
+        <div class="navbar-menu" id="open-navbar1">
+            <ul class="navbar-nav">
+                <li class="navbar-dropdown">
+                    <a class="dropdown-toggler" data-dropdown="skola-vyber">
+                        škola <i class="fa fa-angle-down"></i>
+                    </a>
 
-					</nav>
+                    <?php
+                    wp_nav_menu(
+                        array(
+                            'menu'=>'school',
+                            'container'=>'',
+                            'theme_location'=>'school',
+                            'items_wrap' => '<ul class="dropdown" id="skola-vyber">%3$s</ul>'
+                        )
+                    )
+                    ?>
 
-				</div>
+                </li>
 
-			</header>
+                <li class="navbar-dropdown">
+                    <a class="dropdown-toggler" data-dropdown="ucitel-vyber">
+                        učitel <i class="fa fa-angle-down"></i>
+                    </a>
+                    <?php
+                    wp_nav_menu(
+                        array(
+                            'menu'=>'teacher',
+                            'container'=>'',
+                            'theme_location'=>'teacher',
+                            'items_wrap' => '<ul class="dropdown" id="ucitel-vyber">%3$s</ul>'
+                        )
+                    )
+                    ?>
+                </li>
+
+                <li class="navbar-dropdown">
+                    <a class="dropdown-toggler" data-dropdown="rodiczak-vyber">
+                        rodič / žák <i class="fa fa-angle-down"></i>
+                    </a>
+                    <?php
+                    wp_nav_menu(
+                        array(
+                            'menu'=>'parent',
+                            'container'=>'',
+                            'theme_location'=>'parent',
+                            'items_wrap' => '<ul class="dropdown" id="rodiczak-vyber">%3$s</ul>'
+                        )
+                    )
+                    ?>
+                </li>
+
+                <li class="navbar-dropdown">
+                    <a class="dropdown-toggler" data-dropdown="kontakty-vyber">
+                        kontakty <i class="fa fa-angle-down"></i>
+                    </a>
+                    <?php
+                    wp_nav_menu(
+                        array(
+                            'menu'=>'contacts',
+                            'container'=>'',
+                            'theme_location'=>'contacts',
+                            'items_wrap' => '<ul class="dropdown" id="kontakty-vyber">%3$s</ul>'
+                        )
+                    )
+                    ?>
+                </li>
+                <li class="navbar-dropdown intraBtn-wrapper">
+                    <a href="#" class="intraBtn">
+                        INTERNÍ SYSTÉM
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
