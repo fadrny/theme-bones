@@ -20,24 +20,24 @@ get_header();
 <div class="arguments">
     <div class="inCategory-wrap arguments-wrap">
         <div class="category-name-wrap">
-            <h1 id="arguments-name"><?php echo get_theme_mod('arguments-name',
+            <h1 id="arguments-name"><?php echo get_theme_mod('arguments_name',
                     'Základní pilíře Montessori')?></h1>
         </div>
         <div class="arguments-container">
             <div class="single-argument">
                 <img src="<?php echo get_template_directory_uri()?>/library/images/znak.svg" alt="znak">
                 <div class="argument-texts">
-                    <h3 class="argument-nadpisek"><?php echo get_theme_mod('pilir1-citat',
-                            '“Za své vzdělání nese odpovědnost každý sám”')?></h3>
+                    <a href="<?php echo get_theme_mod('pilir1-odkaz', '#')?>" class="argument-nadpisek"><?php echo get_theme_mod('pilir1-citat',
+                            '“Za své vzdělání nese odpovědnost každý sám”')?></a>
                     <p class="argument-textik" ><?php echo get_theme_mod('pilir1-textik',
                             'Aenean id metus id velit ullamcorper pulvinar. Curabitur bibendum justo non orci')?></p>
                 </div>
             </div>
-            <div class="single-argument">
+            <div class="single-argument"  >
                 <img src="<?php echo get_template_directory_uri()?>/library/images/znak.svg" alt="znak">
                 <div class="argument-texts">
-                    <h3 class="argument-nadpisek"><?php echo get_theme_mod('pilir2-citat',
-                            '“Za své vzdělání nese odpovědnost každý sám”')?></h3>
+                    <a href="<?php echo get_theme_mod('pilir2-odkaz', '#')?>" class="argument-nadpisek"><?php echo get_theme_mod('pilir2-citat',
+                            '“Za své vzdělání nese odpovědnost každý sám”')?></a>
                     <p class="argument-textik" ><?php echo get_theme_mod('pilir2-textik',
                             'Aenean id metus id velit ullamcorper pulvinar. Curabitur bibendum justo non orci')?></p>
                 </div>
@@ -45,8 +45,8 @@ get_header();
             <div class="single-argument">
                 <img src="<?php echo get_template_directory_uri()?>/library/images/znak.svg" alt="znak">
                 <div class="argument-texts">
-                    <h3 class="argument-nadpisek"><?php echo get_theme_mod('pilir3-citat',
-                            '“Za své vzdělání nese odpovědnost každý sám”')?></h3>
+                    <a href="<?php echo get_theme_mod('pilir3-odkaz', '#')?>" class="argument-nadpisek"><?php echo get_theme_mod('pilir3-citat',
+                            '“Za své vzdělání nese odpovědnost každý sám”')?></a>
                     <p class="argument-textik" ><?php echo get_theme_mod('pilir3-textik',
                             'Aenean id metus id velit ullamcorper pulvinar. Curabitur bibendum justo non orci')?></p>
                 </div>
@@ -54,8 +54,8 @@ get_header();
             <div class="single-argument">
                 <img src="<?php echo get_template_directory_uri()?>/library/images/znak.svg" alt="znak">
                 <div class="argument-texts">
-                    <h3 class="argument-nadpisek"><?php echo get_theme_mod('pilir4-citat',
-                            '“Za své vzdělání nese odpovědnost každý sám”')?></h3>
+                    <a href="<?php echo get_theme_mod('pilir4-odkaz', '#')?>" class="argument-nadpisek"><?php echo get_theme_mod('pilir4-citat',
+                            '“Za své vzdělání nese odpovědnost každý sám”')?></a>
                     <p class="argument-textik" ><?php echo get_theme_mod('pilir4-textik',
                             'Aenean id metus id velit ullamcorper pulvinar. Curabitur bibendum justo non orci')?></p>
                 </div>
@@ -69,44 +69,49 @@ get_header();
             <h1 id="links-name">Důležité odkazy</h1>
         </div>
         <div class="links-icons">
-            <a class="one-link" href="#">
+            <a class="one-link" href="<?php echo get_theme_mod('link-onclick1', '#')?>">
                 <div class="img_wrap">
                     <img src="<?php echo get_template_directory_uri()?>/library/images/arguments/contacts.svg"/>
                 </div>
                 <div class="one-link-text">
-                    <h3>kontakty</h3>
+                    <h3><?php echo get_theme_mod('link-displayText1',
+                            'Kontakty')?></h3>
                 </div>
             </a>
-            <a class="one-link" href="#">
+            <a class="one-link" href="<?php echo get_theme_mod('link-onclick2', '#')?>">
                 <div class="img_wrap">
                     <img src="<?php echo get_template_directory_uri()?>/library/images/arguments/group.svg"/>
                 </div>
                 <div class="one-link-text">
-                    <h3>kdo jsme</h3>
+                    <h3><?php echo get_theme_mod('link-displayText2',
+                            'Kdo jsme')?></h3>
                 </div>
             </a>
-            <a class="one-link" href="#">
+            <a class="one-link" href="<?php echo get_theme_mod('link-onclick3', '#')?>">
                 <div class="img_wrap">
                     <img src="<?php echo get_template_directory_uri()?>/library/images/arguments/bricks.svg"/>
                 </div>
                 <div class="one-link-text">
-                    <h3>naše škola</h3>
+                    <h3><?php echo get_theme_mod('link-displayText3',
+                            'Naše škola')?></h3>
                 </div>
             </a>
-            <a class="one-link" href="#">
+            <a class="one-link" href="<?php echo get_theme_mod('link-onclick4', '#')?>">
                 <div class="img_wrap">
                     <img src="<?php echo get_template_directory_uri()?>/library/images/arguments/vision.svg"/>
                 </div>
                 <div class="one-link-text">
-                    <h3>vize školy</h3>
+                    <h3><?php echo get_theme_mod('link-displayText4',
+                            'Víze školy')?></h3>
                 </div>
             </a>
-            <a class="one-link" href="#">
+            <a class="one-link" href="<?php echo get_theme_mod('link-onclick5', '#')?>">
                 <div class="img_wrap">
                     <img src="<?php echo get_template_directory_uri()?>/library/images/arguments/on_school.svg"/>
                 </div>
                 <div class="one-link-text">
-                    <h3>výuka na škole</h3>
+                    <h3><?php echo get_theme_mod('link-displayText5',
+                            'Výuka na škole')?></h3>
                 </div>
             </a>
         </div>
@@ -115,7 +120,7 @@ get_header();
 <div class="aktuality">
     <div class="inCategory-wrap aktuality-wrap">
         <div class="category-name-wrap">
-            <h1 id="links-name">Aktuality</h1>
+            <h1 id="links-name"><?php echo get_theme_mod('aktuality_name', 'Aktuality')?></h1>
         </div>
         <div class="aktuality-bounding-box">
 
@@ -178,22 +183,28 @@ get_header();
             <div class="splide__track">
                 <ul class="splide__list">
                     <li class="splide__slide" >
-                        <img src="assets/photos/fotogalerie/pexels-gabby-k-5063465 (Small).jpg"/>
+                        <img src="<?php echo get_theme_mod('gallery_image1',
+                            get_template_directory_uri() . "/library/images/gallery/photo1.jpg")?>"/>
                     </li>
                     <li class="splide__slide" >
-                        <img src="assets/photos/fotogalerie/pexels-ivan-samkov-6816531 (Small).jpg"/>
+                        <img src="<?php echo get_theme_mod('gallery_image2',
+                            get_template_directory_uri() . "/library/images/gallery/photo2.jpg")?>"/>
                     </li>
                     <li class="splide__slide" >
-                        <img src="assets/photos/fotogalerie/pexels-katerina-holmes-5905520 (Small).jpg"/>
+                        <img src="<?php echo get_theme_mod('gallery_image3',
+                            get_template_directory_uri() . "/library/images/gallery/photo3.jpg")?>"/>
                     </li>
                     <li class="splide__slide" >
-                        <img src="assets/photos/fotogalerie/pexels-max-fischer-5212669 (Small).jpg"/>
+                        <img src="<?php echo get_theme_mod('gallery_image4',
+                            get_template_directory_uri() . "/library/images/gallery/photo4.jpg")?>"/>
                     </li>
                     <li class="splide__slide" >
-                        <img src="assets/photos/fotogalerie/pexels-meliani-driss-2982449 (Small).jpg"/>
+                        <img src="<?php echo get_theme_mod('gallery_image5',
+                            get_template_directory_uri() . "/library/images/gallery/photo5.jpg")?>"/>
                     </li>
                     <li class="splide__slide" >
-                        <img src="assets/photos/fotogalerie/pexels-tima-miroshnichenko-5427671 (Small).jpg"/>
+                        <img src="<?php echo get_theme_mod('gallery_image6',
+                            get_template_directory_uri() . "/library/images/gallery/photo6.jpg")?>"/>
                     </li>
                 </ul>
             </div>
@@ -204,7 +215,8 @@ get_header();
 <div class="calendar">
     <div class="inCategory-wrap calendar-wrap">
         <div class="category-name-wrap">
-            <h1 id="links-name">Plánované akce</h1>
+            <h1 id="links-name"><?php echo get_theme_mod('calendar_name',
+                    'Plánované akce')?></h1>
         </div>
         <div class="events">
             <div class="first-event-wrapper">
@@ -260,17 +272,21 @@ get_header();
 <div class="partners">
     <div class="inCategory-wrap partners-wrap">
         <div class="category-name-wrap">
-            <h1 id="links-name">Naši partneři</h1>
+            <h1 id="links-name"><?php echo get_theme_mod('partners_name',
+                    'Naši partneři')?></h1>
         </div>
         <div class="partners-logos-container">
-            <a href="#" class="partner-wrap">
-                <img src="assets/logos/tretiLogo.png" class="partner-logo">
+            <a href="<?php echo get_theme_mod('partners-link1','#')?>" class="partner-wrap">
+                <img src="<?php echo get_theme_mod('partners-logo1',
+                    get_template_directory_uri() . "/library/images/logos/jednoLogo.png")?>" class="partner-logo">
             </a>
-            <a href="#" class="partner-wrap">
-                <img src="assets/logos/druhyLogo.png" class="partner-logo">
+            <a href="<?php echo get_theme_mod('partners-link2','#')?>" class="partner-wrap">
+                <img src="<?php echo get_theme_mod('partners-logo2',
+                    get_template_directory_uri() . "/library/images/logos/druhyLogo.png")?>" class="partner-logo">
             </a>
-            <a href="#" class="partner-wrap">
-                <img src="assets/logos/jednoLogo.png" class="partner-logo">
+            <a href="<?php echo get_theme_mod('partners-link3','#')?>" class="partner-wrap">
+                <img src="<?php echo get_theme_mod('partners-logo3',
+                    get_template_directory_uri() . "/library/images/logos/tretiLogo.png")?>" class="partner-logo">
             </a>
         </div>
     </div>

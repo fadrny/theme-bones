@@ -1,0 +1,24 @@
+@use "post-fix";
+@import "../defines";
+
+#content{
+  margin-top: unset;
+}
+
+#main{
+  margin-top: 10rem;
+}
+
+.archive-title{
+  color: $base-color;
+}
+
+.search-title{
+  a{
+
+    color: darken($secondary-color, 15%);
+    &:hover{
+      color: $secondary-color;
+    }
+  }
+}

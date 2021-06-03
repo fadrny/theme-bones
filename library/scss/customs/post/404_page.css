@@ -438,6 +438,10 @@ article img {
   width: 100%;
 }
 
+article {
+  max-width: 85rem;
+}
+
 #main {
   display: flex;
   flex-wrap: wrap;

@@ -442,9 +442,23 @@ article {
   max-width: 85rem;
 }
 
-#main article {
-  max-width: 55rem;
-  margin: auto;
+#content {
+  margin-top: unset;
 }
 
-/*# sourceMappingURL=single.css.map */
+#main {
+  margin-top: 10rem;
+}
+
+.archive-title {
+  color: #274060;
+}
+
+.search-title a {
+  color: #cf7700;
+}
+.search-title a:hover {
+  color: #FF9F1C;
+}
+
+/*# sourceMappingURL=searchPage.css.map */

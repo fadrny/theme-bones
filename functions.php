@@ -293,11 +293,15 @@ function wpse_enqueue_page_template_includes() {
             array('monte-bootstrap', 'bones-stylesheet'), 1.0, 'all');
     }
     else if (is_single()){
-        wp_enqueue_style('monte-404_customs', get_template_directory_uri() . "/library/scss/customs/post/single.css",
+        wp_enqueue_style('monte-single_customs', get_template_directory_uri() . "/library/scss/customs/post/single.css",
+            array('monte-bootstrap', 'bones-stylesheet'), 1.0, 'all');
+    }
+    else if (is_search()){
+        wp_enqueue_style('monte-search_customs', get_template_directory_uri() . "/library/scss/customs/post/searchPage.css",
             array('monte-bootstrap', 'bones-stylesheet'), 1.0, 'all');
     }
     else{
-        wp_enqueue_style('monte-single_type', get_template_directory_uri() . "/library/scss/customs/post/single.css",
+        wp_enqueue_style('monte-single_type', get_template_directory_uri() . "/library/scss/customs/post/post-fix.css",
             array('monte-bootstrap', 'bones-stylesheet'), 1.0, 'all');
     }
 }
@@ -310,7 +314,6 @@ function montepce_register_includes(){
         array(), 1.0, 'all');
     wp_enqueue_style('monte-footer-and-header', get_template_directory_uri() . "/library/scss/customs/NavbarAndFooter.css",
         array('monte-bootstrap', 'bones-stylesheet'), 1.0, 'all');
-
 }
 
 add_action('wp_enqueue_scripts', 'montepce_register_includes');

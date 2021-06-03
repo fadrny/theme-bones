@@ -438,6 +438,10 @@ article img {
   width: 100%;
 }
 
+article {
+  max-width: 85rem;
+}
+
 .one-aktualita {
   margin: 3rem 2rem;
 }
