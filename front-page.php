@@ -5,7 +5,7 @@ get_header();
 <div class="carousel">
     <img src="<?php echo get_theme_mod('carousel_background',
         get_template_directory_uri() . "/library/images/bg.jpg")?>" class="main-photo">
-    <div class="over-carousel">
+    <div class="over-carousel <?php echo get_theme_mod('carousel_over')?>">
         <div class="over-carousel-wrapper">
             <img src="<?php echo get_template_directory_uri()?>/library/images/MariaMontessori_sm.png" class="MariaImage"/>
             <div class="texts">

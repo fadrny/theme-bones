@@ -17,7 +17,7 @@
     .over-carousel{
         height: 12.5rem;
         width: 45rem;
-        border-radius: 5rem 0 0 5rem;
+        border-radius: 25rem 0 0 25rem;
         background-color: rgba(48,48,48,0.75);
         position: absolute;
         right: 0;
@@ -99,3 +99,18 @@
         }
     }
 }
+
+.primary-modi {
+    background-color: transparentize($base-color,0.25) !important;
+}
+
+.secondary-modi {
+    background-color: transparentize($secondary-color,0.25) !important;
+    .over-carousel-wrapper .texts{
+            color: $text-dark !important;
+    }
+    .over-carousel-wrapper img{
+        border-color: $text-dark !important;
+    }
+}
+

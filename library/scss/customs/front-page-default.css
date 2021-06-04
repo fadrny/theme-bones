@@ -678,7 +678,7 @@ body {
 .carousel .over-carousel {
   height: 12.5rem;
   width: 45rem;
-  border-radius: 5rem 0 0 5rem;
+  border-radius: 25rem 0 0 25rem;
   background-color: rgba(48, 48, 48, 0.75);
   position: absolute;
   right: 0;
@@ -771,6 +771,20 @@ body {
   .carousel .over-carousel .over-carousel-wrapper .texts .citat {
     font-size: 4.5vw;
   }
+}
+
+.primary-modi {
+  background-color: rgba(39, 64, 96, 0.75) !important;
+}
+
+.secondary-modi {
+  background-color: rgba(255, 159, 28, 0.75) !important;
+}
+.secondary-modi .over-carousel-wrapper .texts {
+  color: #303030 !important;
+}
+.secondary-modi .over-carousel-wrapper img {
+  border-color: #303030 !important;
 }
 
 .arguments {

@@ -282,7 +282,9 @@ nav {
 .footer .footer-wrap .cool-links .cool-links-wrapper {
   margin-top: 3.3333333333rem;
 }
-.footer .footer-wrap .cool-links .cool-links-wrapper .one-cool-link {
+.footer .footer-wrap .cool-links .cool-links-wrapper .one-cool-link li, .footer .footer-wrap .cool-links .cool-links-wrapper a {
+  list-style-type: none;
+  padding: 0;
   display: block;
   text-align: center;
   text-decoration: none;
@@ -309,6 +311,7 @@ nav {
 .footer .footer-wrap .kontakty .one-kontakt .one-kontakt-text {
   font-weight: 600;
   font-size: 1.2rem;
+  color: #ffffff;
 }
 .footer .footer-wrap .white-strip {
   width: 100%;

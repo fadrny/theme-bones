@@ -41,6 +41,21 @@ function carousel_customizer_function($wp_customize)
             'priority' => 12
         ))
     );
+    $wp_customize->add_setting('carousel_over', array(
+        'default' => 'default',
+        'transport'  => 'refresh'
+    ));
+    $wp_customize->add_control('carousel_over', array(
+        'label' => 'Barevné provedení pruhu',
+        'section' => 'carousel',
+        'priority' => 13,
+        'type' => 'select',
+        'choices' => array(
+            'default' => 'původní',
+            'primary-modi' => 'modrá',
+            'secondary-modi' => "oranžová",
+        )
+    ));
     //</editor-fold>
 
     //<editor-fold desc="Arguments">
@@ -474,8 +489,40 @@ function carousel_customizer_function($wp_customize)
     ));
     //</editor-fold>
 
-    //<editor-fold desc="Links">
+    //<editor-fold desc="Footer">
 
+    $wp_customize->add_section('footer_contacts', array(
+        'title' => 'Kontakty-Patička',
+        'description' => __('Nastavení sekce Kontakty-Patička'),
+        'panel' => 'monte-customize'
+    ));
+
+    $wp_customize->add_setting('footer_contacts_phone', array(
+        'default' => __('+420 123 456 789')
+    ));
+    $wp_customize->add_control('footer_contacts_phone', array(
+        'section' => 'footer_contacts',
+        'label' => 'Telefonní číslo',
+        'priority' => 5,
+    ));
+
+    $wp_customize->add_setting('footer_contacts_mail', array(
+        'default' => __('info@zsmontepce.cz')
+    ));
+    $wp_customize->add_control('footer_contacts_mail', array(
+        'section' => 'footer_contacts',
+        'label' => 'E-mail',
+        'priority' => 10,
+    ));
+
+    $wp_customize->add_setting('footer_contacts_address', array(
+        'default' => __('Družstevní 305 <br> 530 09 Pardubice')
+    ));
+    $wp_customize->add_control('footer_contacts_address', array(
+        'section' => 'footer_contacts',
+        'label' => 'Adresa',
+        'priority' => 15,
+    ));
     //</editor-fold>
 }
 

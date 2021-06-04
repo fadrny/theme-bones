@@ -24,7 +24,9 @@
       .cool-links-wrapper{
         margin-top: $category-margin / 1.5;
 
-        .one-cool-link{
+        .one-cool-link li, a{
+          list-style-type: none;
+          padding: 0;
           display: block;
           text-align: center;
           text-decoration: none;
@@ -56,6 +58,7 @@
         .one-kontakt-text{
           font-weight: 600;
           font-size: 1.2rem;
+          color: $bg-color;
         }
       }
     }
